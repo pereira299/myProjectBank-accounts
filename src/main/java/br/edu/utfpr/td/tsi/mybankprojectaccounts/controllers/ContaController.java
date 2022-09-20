@@ -9,8 +9,8 @@ import java.util.List;
 public class ContaController implements IContaController {
     private final IContaDAO contaDAO;
 
-    public ContaController() {
-        this.contaDAO = new ContaDAO();
+    public ContaController(IContaDAO contaDAO) {
+        this.contaDAO = contaDAO;
     }
 
     public Conta criar(Conta conta) {
